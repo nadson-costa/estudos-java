@@ -38,7 +38,7 @@ public abstract class Pagamento {
 
     public void confirmarPagamento(){
         isStatusPago(true);
-        System.out.println("---> Pagamento confirmado com sucesso!");
+        System.out.println("---> Pagamento finalizado com sucesso!");
     }
 
     public double calcularValorFinal(){
@@ -53,7 +53,6 @@ public abstract class Pagamento {
         System.out.println("Data do pagamento: " + dataPagamento);
         System.out.println("Status do pagamento: " + statusPago);
         System.out.println("================================");
-        System.out.println();
     }
 
 }
