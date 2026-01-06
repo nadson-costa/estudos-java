@@ -13,6 +13,30 @@ public abstract class Pagamento {
         this.statusPago = false;
     }
 
+    public abstract double calcularTaxas();
+    public abstract void processar();
+
+    public void confirmarPagamento(){
+        this.statusPago = true;
+        System.out.println("✓ Pagamento confirmado com sucesso!");
+    }
+
+    public double calcularValorFinal(){
+        return valor + calcularTaxas();
+    }
+
+    public void exibirDetalhes(){
+        System.out.println();
+        System.out.println("==== INFORMAÇÕES DO PAGAMENTO ====");
+        System.out.printf("Valor: R$ %.2f\n", valor);
+        System.out.println("Descrição: " + descricao);
+        System.out.println("Data: " + dataPagamento);
+        System.out.println("Status: " + (statusPago ? "Pago" : "Pendente"));
+        System.out.printf("Valor final: R$ %.2f\n", calcularValorFinal());
+        System.out.println("===================================");
+        System.out.println();
+    }
+
     public double getValor(){
         return valor;
     }
@@ -25,34 +49,11 @@ public abstract class Pagamento {
         return dataPagamento;
     }
 
-    public boolean getStatusPago(){
+    public boolean isStatusPago(){
         return statusPago;
     }
 
-    public void isStatusPago(boolean statusPago){
+    public void setStatusPago(boolean statusPago){
         this.statusPago = statusPago;
     }
-
-    public abstract double calcularTaxas();
-    public abstract void processar();
-
-    public void confirmarPagamento(){
-        isStatusPago(true);
-        System.out.println("---> Pagamento finalizado com sucesso!");
-    }
-
-    public double calcularValorFinal(){
-        return valor + calcularTaxas();
-    }
-
-    public void exibirDetalhes(){
-        System.out.println();
-        System.out.println("==== INFORMAÇÕES DO PAGAMENTO ====");
-        System.out.println("Valor do pagamento: " + valor);
-        System.out.println("Descrição: " + descricao);
-        System.out.println("Data do pagamento: " + dataPagamento);
-        System.out.println("Status do pagamento: " + statusPago);
-        System.out.println("================================");
-    }
-
 }
