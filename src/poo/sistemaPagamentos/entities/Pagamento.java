@@ -18,7 +18,7 @@ public abstract class Pagamento {
 
     public void confirmarPagamento(){
         this.statusPago = true;
-        System.out.println("✓ Pagamento confirmado com sucesso!");
+        System.out.println("-> Pagamento confirmado com sucesso!");
     }
 
     public double calcularValorFinal(){
