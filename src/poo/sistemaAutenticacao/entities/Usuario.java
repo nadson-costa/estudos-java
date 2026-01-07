@@ -36,4 +36,8 @@ public class Usuario {
     public boolean isLogado(){
         return logado;
     }
+
+    public boolean setLogado(boolean logado){
+        this.logado = logado;
+    }
 }
