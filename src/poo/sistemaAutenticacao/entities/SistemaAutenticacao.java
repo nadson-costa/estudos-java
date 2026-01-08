@@ -63,11 +63,11 @@ public class SistemaAutenticacao {
         boolean encontrou = false;
 
         for(Usuario usuario: usuarios){
-            if(tipo.equalsIgnoreCase("Funcionarios") && usuario instanceof Funcionario){
+            if(tipo.equalsIgnoreCase("Funcionario") && usuario instanceof Funcionario){
                 usuario.exibirInfo();
                 encontrou = true;
             } else if(
-                    tipo.equalsIgnoreCase("Gerentes") && usuario instanceof Gerente){
+                    tipo.equalsIgnoreCase("Gerente") && usuario instanceof Gerente){
                 usuario.exibirInfo();
                 encontrou = true;
             } else if(
