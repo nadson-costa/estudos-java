@@ -37,7 +37,7 @@ public class Usuario {
         return logado;
     }
 
-    public boolean setLogado(boolean logado){
+    public void setLogado(boolean logado){
         this.logado = logado;
     }
 }
