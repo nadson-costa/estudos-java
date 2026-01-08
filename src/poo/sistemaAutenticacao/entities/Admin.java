@@ -56,6 +56,7 @@ public class Admin extends Usuario implements Autenticavel, Administravel {
         System.out.println("=== LISTA DE USUÁRIOS ===");
         if(usuariosGerenciados.isEmpty()){
             System.out.println("-> Nenhum usuário registrado!");
+            return;
         }
         for(Usuario usuario : usuariosGerenciados){
             usuario.exibirInfo();

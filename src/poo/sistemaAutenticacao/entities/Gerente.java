@@ -67,6 +67,7 @@ public class Gerente extends Usuario implements Autenticavel, Administravel, Aud
         System.out.println("=== LISTA DE USUÁRIOS ===");
         if(usuariosGerenciados.isEmpty()){
             System.out.println("-> Nenhum usuário registrado!");
+            return;
         }
         for(Usuario usuario : usuariosGerenciados){
             usuario.exibirInfo();
