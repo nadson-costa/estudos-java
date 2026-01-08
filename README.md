@@ -13,7 +13,11 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 #### Encapsulamento, Herança e Polimorfismo
 - **[Sistema de Concessionária](src/poo/sistemaConcessionaria/)** - Hierarquia de classes, sobrescrita de métodos, `instanceof`
 
+#### Abstração
+- **[Sistema de Pagamentos](src/poo/sistemaPagamentos/)** - Classes abstratas, métodos abstratos, Template Method Pattern, processamento de pagamentos (Cartão/PIX/Boleto)
 
+#### Interfaces
+- **[Sistema de Autenticação](src/poo/sistemaAutenticacao/)** -  Interfaces, múltiplas implementações, controle de permissões, polimorfismo avançado
 
 ## Conceitos praticados
 
@@ -25,13 +29,18 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
     - Herança
     - Polimorfismo
     - Abstração
+    - Interfaces
 - Tratamento de exceções
 - Manipulação de arquivos
 - Padrões de projeto
 
 ## Próximos aprendizados
 
-- [ ] Interfaces e Classes Abstratas
+- [x] Fundamentos de Java
+- [x] Encapsulamento
+- [x] Herança e Polimorfismo
+- [x] Abstração
+- [x] Interfaces
 - [ ] Collections Framework avançado
 - [ ] Tratamento de Exceções
 - [ ] Java Streams e Lambda Expressions
