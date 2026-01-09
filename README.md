@@ -19,6 +19,11 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 #### Interfaces
 - **[Sistema de Autenticação](src/poo/sistemaAutenticacao/)** -  Interfaces, múltiplas implementações, controle de permissões, polimorfismo avançado
 
+### Tratamento de Exceções
+#### Interfaces
+- **[Cadastro de Usuários](src/poo/cadastroUsuarios/)** -  Exceções personalizadas, throws/throw, múltiplos catch, finally, validações de dados 
+
+
 ## Conceitos praticados
 
 - Sintaxe Java e tipos de dados
