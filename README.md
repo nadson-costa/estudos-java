@@ -21,7 +21,7 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 
 ### Tratamento de Exceções
 #### Interfaces
-- **[Cadastro de Usuários](src/poo/cadastroUsuarios/)** -  Exceções personalizadas, throws/throw, múltiplos catch, finally, validações de dados 
+- **[Cadastro de Usuários](src/exceptions/cadastroUsuarios/)** -  Exceções personalizadas, throws/throw, múltiplos catch, finally, validações de dados 
 
 
 ## Conceitos praticados
