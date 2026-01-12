@@ -7,7 +7,7 @@ public class Conta {
     protected String titular;
     protected double saldo;
 
-    public Conta(String numeroConta, String titular) throws ContaNaoEncontradaException, ValorInvalidoException, SaldoInsuficienteException{
+    public Conta(String numeroConta, String titular){
 
         validarNumeroConta(numeroConta);
         this.numeroConta = numeroConta;
