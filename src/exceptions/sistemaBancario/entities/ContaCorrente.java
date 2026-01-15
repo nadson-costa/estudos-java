@@ -20,6 +20,9 @@ public class ContaCorrente extends Conta {
         if(valor > valorDisponivelTotal){
             throw new LimiteExcedidoException("-> ERRO: O valor excede o limite!");
         }
+
+        this.saldo = this.saldo - valor;
+
         if(saldo < 0){
             System.out.println(">> Saque de R$ " + valor + " realizado (usando cheque especial)");
         } else {
