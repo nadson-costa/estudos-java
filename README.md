@@ -20,9 +20,8 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 - **[Sistema de Autenticação](src/poo/sistemaAutenticacao/)** -  Interfaces, múltiplas implementações, controle de permissões, polimorfismo avançado
 
 ### Tratamento de Exceções
-#### Interfaces
 - **[Cadastro de Usuários](src/exceptions/cadastroUsuarios/)** -  Exceções personalizadas, throws/throw, múltiplos catch, finally, validações de dados 
-
+- **[Sistema Bancário](src/exceptions/sistemaBancario/)** -  Sistema bancário completo com Conta Corrente (cheque especial), Conta Poupança (rendimento), exceções checked/unchecked, herança, polimorfismo, arquitetura em camadas
 
 ## Conceitos praticados
 
@@ -35,6 +34,11 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
     - Polimorfismo
     - Abstração
     - Interfaces
+- Exceções
+  - Try-catch-finally 
+  - Exceções personalizadas (checked e unchecked)
+  - throws e throw
+  - Hierarquia de exceções
 - Tratamento de exceções
 - Manipulação de arquivos
 - Padrões de projeto
@@ -47,7 +51,7 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 - [x] Abstração
 - [x] Interfaces
 - [ ] Collections Framework avançado
-- [ ] Tratamento de Exceções
+- [x] Tratamento de Exceções
 - [ ] Java Streams e Lambda Expressions
 - [ ] Programação Funcional
 - [ ] JDBC e persistência de dados
