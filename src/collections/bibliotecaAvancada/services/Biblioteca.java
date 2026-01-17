@@ -51,7 +51,7 @@ public class Biblioteca {
                 filaEspera.put(isbn, fila);
             }
             fila.offer(usuario);
-            System.out.println(">>> Livro indisponível! O usuário " + usuario.getNome() + "foi colocado na lista de espera");
+            System.out.println(">>> Livro indisponível! O usuário " + usuario.getNome() + " foi colocado na lista de espera");
             return null;
         }
 
