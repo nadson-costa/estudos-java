@@ -59,4 +59,24 @@ public class Biblioteca {
         System.out.println(">>> Livro emprestado com sucesso para " + usuario.getNome());
         return livro;
     }
+
+    public Livro devolverLivro(String isbn){
+        Livro livro = livrosPorISBN.get(isbn);
+        if(livro == null){
+            System.out.println(">>> Nenhum livro foi encontrado!");
+            return null;
+        }
+
+        livro.devolver();
+        System.out.println(">>> Livro devolvido com sucesso!");
+
+        Queue<Usuario> fila = filaEspera.get(isbn);
+        if(fila != null && !fila.isEmpty()){
+            System.out.println(">>> Verificando fila de espera...");
+            Usuario proximo = fila.poll();
+            livro.emprestar();
+            System.out.println(">>> Livro " + livro.getTitulo() + " emprestado para o próximo da fila: " + proximo.getNome());
+        }
+        return livro;
+    }
 }
