@@ -37,4 +37,26 @@ public class Biblioteca {
         }
         return resultado;
     }
+
+    public Livro emprestarLivro(String isbn, Usuario usuario){
+        Livro livro =  livrosPorISBN.get(isbn);
+        if(livro==null){
+            System.out.println(">>> Nenhum livro foi encontrado!");
+            return null;
+        }
+        if(!livro.isDisponivel()){
+            Queue<Usuario> fila = filaEspera.get(isbn);
+            if(fila == null){
+                fila = new LinkedList<>();
+                filaEspera.put(isbn, fila);
+            }
+            fila.offer(usuario);
+            System.out.println(">>> Livro indisponível! O usuário " + usuario.getNome() + "foi colocado na lista de espera");
+            return null;
+        }
+
+        livro.emprestar();
+        System.out.println(">>> Livro emprestado com sucesso para " + usuario.getNome());
+        return livro;
+    }
 }
