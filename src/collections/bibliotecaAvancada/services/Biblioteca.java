@@ -79,4 +79,69 @@ public class Biblioteca {
         }
         return livro;
     }
+
+    public void listarTodos(){
+        if(livros.isEmpty()){
+            System.out.println(">>> Nenhum livro cadastrado!");
+            return;
+        }
+
+        System.out.println("\n=== Lista de livros ===");
+        for(Livro livro : livros){
+            livro.exibirInfo();
+        }
+    }
+
+    public void listarDisponiveis(){
+        if(livros.isEmpty()){
+            System.out.println(">>> Nenhum livro cadastrado!");
+            return;
+        }
+
+        int contador = 0;
+        System.out.println("\n=== Livros disponíveis ===");
+        for(Livro livro : livros) {
+            if (livro.isDisponivel()) {
+                livro.exibirInfo();
+                contador++;
+            }
+        }
+        if(contador==0){
+            System.out.println(">>> Nenhum livro disponível!");
+        }
+    }
+
+    public void listarPorCategoria(String categoria){
+        Set<Livro> livrosCategoria = buscarPorCategoria(categoria);
+        if(livrosCategoria.isEmpty()){
+            System.out.println(">>> Nenhum livro encontrado para a categoria: " + categoria);
+            return;
+        }
+
+        System.out.println("\n=== Lista de Livros da Categoria: " + categoria + " ===");
+        for(Livro livro : livrosCategoria){
+            livro.exibirInfo();
+        }
+    }
+
+    public void mostrarFilaEspera(String isbn){
+        Livro livro = buscarPorISBN(isbn);
+        if(livro==null){
+            System.out.println(">>> Livro não encontrado!");
+            return;
+        }
+
+        Queue<Usuario> fila = filaEspera.get(isbn);
+        if(fila == null || fila.isEmpty()){
+            System.out.println(">>> Nenhum usuário na fila de espera para esse livro!");
+            return;
+        }
+
+        System.out.println("\n=== Fila de Espera do Livro " + livro.getTitulo());
+        int posicao = 1;
+        for(Usuario usuario : fila){
+            System.out.println(posicao + ". " + usuario.getNome());
+            posicao++;
+        }
+    }
 }
