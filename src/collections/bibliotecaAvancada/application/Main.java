@@ -5,6 +5,7 @@ import collections.bibliotecaAvancada.entities.Usuario;
 import collections.bibliotecaAvancada.services.Biblioteca;
 
 import java.util.Scanner;
+import java.util.Set;
 
 public class Main {
     public static void main(String args[]){
@@ -66,10 +67,19 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("-> Digite o nome da categoria");
+                    System.out.print("-> Digite a categoria: ");
                     String categoriaLivros = sc.nextLine();
 
-                    biblioteca.buscarPorCategoria(categoriaLivros);
+                    Set<Livro> livros = biblioteca.buscarPorCategoria(categoriaLivros);
+
+                    if(livros.isEmpty()){
+                        System.out.println(">>> Nenhum livro encontrado nessa categoria!");
+                    } else {
+                        System.out.println("\n=== Livros da Categoria: " + categoriaLivros + " ===");
+                        for(Livro l : livros){
+                            l.exibirInfo();
+                        }
+                    }
                     break;
 
                 case 4:
