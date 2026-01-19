@@ -23,6 +23,9 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 - **[Cadastro de Usuários](src/exceptions/cadastroUsuarios/)** -  Exceções personalizadas, throws/throw, múltiplos catch, finally, validações de dados 
 - **[Sistema Bancário](src/exceptions/sistemaBancario/)** -  Sistema bancário completo com Conta Corrente (cheque especial), Conta Poupança (rendimento), exceções checked/unchecked, herança, polimorfismo, arquitetura em camadas
 
+### Collections avançadas
+- **[Biblioteca Avançada](src/collections/bibliotecaAvancada/)** -  Sistema completo com HashSet (livros únicos), HashMap (busca O(1)), Map<Set> (índice de categorias), Map<Queue> (filas de espera), empréstimo automático, 10 funcionalidades
+
 ## Conceitos praticados
 
 - Sintaxe Java e tipos de dados
@@ -39,6 +42,13 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
   - Exceções personalizadas (checked e unchecked)
   - throws e throw
   - Hierarquia de exceções
+- Collections avançadas
+    - Set (HashSet, TreeSet, LinkedHashSet)
+    - Map (HashMap, TreeMap, LinkedHashMap)
+    - Queue (LinkedList, PriorityQueue)
+    - Map com Set como valor 
+    - Map com Queue como valor 
+    - equals() e hashCode()
 - Tratamento de exceções
 - Manipulação de arquivos
 - Padrões de projeto
@@ -50,7 +60,7 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 - [x] Herança e Polimorfismo
 - [x] Abstração
 - [x] Interfaces
-- [ ] Collections Framework avançado
+- [x] Collections Framework avançado
 - [x] Tratamento de Exceções
 - [ ] Java Streams e Lambda Expressions
 - [ ] Programação Funcional
