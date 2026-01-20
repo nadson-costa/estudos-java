@@ -25,7 +25,7 @@ public class Medico {
         System.out.println("\n=== Informações do Médico ===");
         System.out.println("CRM: " + crm);
         System.out.println("Nome: " + nome);
-        System.out.println("Especialidade: " + especialidade);
+        System.out.println("Especialidade: " + especialidade.getDescricao());
         System.out.println("Disponível: " + (disponivel ? "Sim" : "Não"));
         System.out.println("============================");
     }
