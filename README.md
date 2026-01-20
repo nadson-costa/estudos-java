@@ -25,6 +25,7 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 
 ### Collections avançadas
 - **[Biblioteca Avançada](src/collections/bibliotecaAvancada/)** -  Sistema completo com HashSet (livros únicos), HashMap (busca O(1)), Map<Set> (índice de categorias), Map<Queue> (filas de espera), empréstimo automático, 10 funcionalidades
+- **[Sistema Kanban](src/collections/sistemaKanban/)** -  Gerenciador de tarefas completo com Enums (Status, Prioridade), PriorityQueue (ordenação por prioridade), TreeSet (ordenação por deadline), Comparators customizados, board Kanban (TODO/DOING/DONE)
 
 ## Conceitos praticados
 
@@ -47,8 +48,14 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
     - Map (HashMap, TreeMap, LinkedHashMap)
     - Queue (LinkedList, PriorityQueue)
     - Map com Set como valor 
-    - Map com Queue como valor 
+    - Map com Queue como valor
+    - TreeSet com Comparator customizado
+    - PriorityQueue com Comparator customizado
     - equals() e hashCode()
+- Java avançado
+    - Enums type-safe com atributos 
+    - Comparators e Lambda Expressions 
+    - java.time (LocalDate, LocalDateTime)
 - Tratamento de exceções
 - Manipulação de arquivos
 - Padrões de projeto
@@ -62,6 +69,7 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 - [x] Interfaces
 - [x] Collections Framework avançado
 - [x] Tratamento de Exceções
+- [x] Enums e Comparators
 - [ ] Java Streams e Lambda Expressions
 - [ ] Programação Funcional
 - [ ] JDBC e persistência de dados
