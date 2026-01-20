@@ -1,7 +1,5 @@
 package collections.gestaoHospitalar.entities;
 
-import collections.sistemaKanban.entities.Usuario;
-
 import java.time.LocalDateTime;
 
 public class Paciente {
