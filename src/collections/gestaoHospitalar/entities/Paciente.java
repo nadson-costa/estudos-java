@@ -39,7 +39,7 @@ public class Paciente {
         return idade;
     }
 
-    public String telefone(){
+    public String getTelefone(){
         return telefone;
     }
 
