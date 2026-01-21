@@ -26,6 +26,7 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 ### Collections avançadas
 - **[Biblioteca Avançada](src/collections/bibliotecaAvancada/)** -  Sistema completo com HashSet (livros únicos), HashMap (busca O(1)), Map<Set> (índice de categorias), Map<Queue> (filas de espera), empréstimo automático, 10 funcionalidades
 - **[Sistema Kanban](src/collections/sistemaKanban/)** -  Gerenciador de tarefas completo com Enums (Status, Prioridade), PriorityQueue (ordenação por prioridade), TreeSet (ordenação por deadline), Comparators customizados, board Kanban (TODO/DOING/DONE)
+- **[Sistema Hospital](src/collections/gestaoHospitalar/)** -  Gestão completa de hospital com filas por especialidade, priorização por urgência, estado dinâmico de médicos
 
 ## Conceitos praticados
 
@@ -56,6 +57,8 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
     - Enums type-safe com atributos 
     - Comparators e Lambda Expressions 
     - java.time (LocalDate, LocalDateTime)
+    - Estado dinâmico de objetos 
+    - Relacionamento entre classes
 - Tratamento de exceções
 - Manipulação de arquivos
 - Padrões de projeto
