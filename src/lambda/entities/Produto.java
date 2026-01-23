@@ -17,4 +17,8 @@ public class Produto {
     public double getPreco(){ return preco; }
     public int getEstoque(){ return estoque; }
     public boolean isPromocao(){ return promocao; }
+    @Override
+    public String toString(){
+        return nome + " - R$ " + preco + " - Estoque: " + estoque;
+    }
 }
