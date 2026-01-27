@@ -144,8 +144,41 @@ public class Main {
                 .distinct()
                 .forEach(cidade -> System.out.println(cidade));
 
+        System.out.println("\n======================\n");
 
+        System.out.println("16. Total de vendas");
+        System.out.println("-> Total: R$ " + pedidos.stream()
+                .mapToDouble(Pedido::getValorTotal)
+                .sum()
+        );
+        System.out.println();
 
+        System.out.println("17. Pedido mais caro");
+        Optional<Pedido> pedidoMaisCaro = pedidos.stream()
+                .max(Comparator.comparing(Pedido::getValorTotal));
+        pedidoMaisCaro.ifPresent(System.out::println);
+        System.out.println();
+
+        System.out.println("18. Pedidos por cliente");
+        Map<String, Long> pedidosPorCliente = pedidos.stream()
+                .collect(Collectors.groupingBy(ped -> ped.getCliente().getNome(), Collectors.counting()));
+        pedidosPorCliente.forEach((cliente, qtd) -> {
+            System.out.println(cliente + ": " + qtd);
+        });
+        System.out.println();
+
+        System.out.println("19. Pedidos de Janeiro/2026");
+        pedidos.stream()
+                .filter(ped -> ped.getData().getYear() == 2026 &&
+                        ped.getData().getMonthValue() == 1)
+                .forEach(ped -> System.out.println(ped));
+        System.out.println();
+
+        System.out.println("20. Produtos que foram vendidos");
+        produtos.stream()
+                .filter(p -> pedidos.stream()
+                        .anyMatch(ped -> ped.getProdutos().contains(p)))
+                .forEach(System.out::println);
 
     }
 }
