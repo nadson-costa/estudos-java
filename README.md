@@ -28,6 +28,12 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 - **[Sistema Kanban](src/collections/sistemaKanban/)** -  Gerenciador de tarefas completo com Enums (Status, Prioridade), PriorityQueue (ordenação por prioridade), TreeSet (ordenação por deadline), Comparators customizados, board Kanban (TODO/DOING/DONE)
 - **[Sistema Hospital](src/collections/gestaoHospitalar/)** -  Gestão completa de hospital com filas por especialidade, priorização por urgência, estado dinâmico de médicos
 
+### Lambda Expressions e Streams API
+- **[Sistema E-commerce](src/lambda/)** -  Sistema completo com 20 desafios usando apenas Streams
+
+
+
+
 ## Conceitos praticados
 
 - Sintaxe Java e tipos de dados
@@ -59,6 +65,15 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
     - java.time (LocalDate, LocalDateTime)
     - Estado dinâmico de objetos 
     - Relacionamento entre classes
+- Programação funcional
+    -  Lambda Expressions 
+    - Interfaces Funcionais (Predicate, Function, Consumer, Supplier)
+    - Method References
+    - Streams API 
+    - Operações intermediárias e terminais 
+    - Collectors (groupingBy, partitioningBy, counting)
+    - Optional 
+    - Stream aninhado
 - Tratamento de exceções
 - Manipulação de arquivos
 - Padrões de projeto
@@ -73,8 +88,8 @@ Este repositório contém projetos práticos desenvolvidos para consolidar conhe
 - [x] Collections Framework avançado
 - [x] Tratamento de Exceções
 - [x] Enums e Comparators
-- [ ] Java Streams e Lambda Expressions
-- [ ] Programação Funcional
+- [x] Java Streams e Lambda Expressions
+- [x] Programação Funcional
 - [ ] JDBC e persistência de dados
 - [ ] Design Patterns (Factory, Singleton, Observer, etc.)
 
