@@ -65,16 +65,51 @@ public class Main {
         System.out.println();
 
         System.out.println("4. Preço médio dos produtos");
-        System.out.println(produtos.stream()
+        System.out.println("R$ " + produtos.stream()
                 .mapToDouble(Produto::getPreco)
                 .average()
                 .getAsDouble());
+        System.out.println();
 
         System.out.println("5. Valor total em estoque (preço x estoque)");
         double valorTotal = produtos.stream()
                 .mapToDouble(p -> p.getPreco() * p.getEstoque())
                 .sum();
         System.out.println("R$ " + valorTotal);
+        System.out.println();
+
+        System.out.println("6. Existe algum produto sem estoque?");
+        boolean semEstoque = produtos.stream()
+                .anyMatch(p -> p.getEstoque() == 0);
+        System.out.println(semEstoque);
+        System.out.println();
+
+        System.out.println("7. Todos os produtos custam menos de R$ 5000?");
+        boolean todosMenos5k = produtos.stream()
+                .allMatch(p -> p.getPreco() < 5000.0);
+        System.out.println(todosMenos5k);
+        System.out.println();
+
+        System.out.println("8. Categorias únicas que têm produtos");
+        produtos.stream()
+                .map(Produto::getCategoria)
+                .distinct()
+                .forEach(c -> System.out.println(c.getDescricao()));
+        System.out.println();
+
+        System.out.println("9. Produtos caros (>100) X produtos baratos (<100)");
+        Map<Boolean, List<Produto>> carosVsBaratos = produtos.stream()
+                .collect(Collectors.partitioningBy(p -> p.getPreco() > 100));
+        System.out.println("Produtos caros: " + carosVsBaratos.get(true).size());
+        System.out.println("Produtos baratos " + carosVsBaratos.get(false).size());
+        System.out.println();
+
+        System.out.println("10. Todos os nomes dos produtos");
+        produtos.stream()
+                .map(Produto::getNome)
+                .forEach(nome -> System.out.println(nome));
+        System.out.println();
+
 
 
     }
