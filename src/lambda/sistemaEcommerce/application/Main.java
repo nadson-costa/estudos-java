@@ -108,7 +108,42 @@ public class Main {
         produtos.stream()
                 .map(Produto::getNome)
                 .forEach(nome -> System.out.println(nome));
+
+        System.out.println("\n======================\n");
+
+        System.out.println("11. Clientes de São Paulo");
+        clientes.stream()
+                .filter(c -> c.getCidade().equalsIgnoreCase("São Paulo"))
+                .forEach(c -> System.out.println(c));
         System.out.println();
+
+        System.out.println("12. Cliente mais jovem");
+        Optional<Cliente> maisJovem = clientes.stream()
+                .min(Comparator.comparing(Cliente::getIdade));
+        maisJovem.ifPresent(System.out::println);
+        System.out.println();
+
+        System.out.println("13. Clientes por cidade");
+        Map<String, Long> clientesPorCidade = clientes.stream()
+                .collect(Collectors.groupingBy(Cliente::getCidade, Collectors.counting()));
+        clientesPorCidade.forEach((cidade, qtd) -> {
+            System.out.println(cidade + ": " + qtd);
+        });
+        System.out.println();
+
+        System.out.println("14. Idade média dos clientes");
+        System.out.println("-> Idade média: " + clientes.stream()
+                .mapToDouble(Cliente::getIdade)
+                .average()
+                .getAsDouble());
+        System.out.println();
+
+        System.out.println("15. Cidades únicas");
+        clientes.stream()
+                .map(Cliente::getCidade)
+                .distinct()
+                .forEach(cidade -> System.out.println(cidade));
+
 
 
 
